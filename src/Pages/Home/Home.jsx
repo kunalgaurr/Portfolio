@@ -3,8 +3,6 @@ import { Layout } from '../../Components/Layout/Layout';
 import './Home.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Navbar } from '../../Components/Navbar/Navbar';
-import { FiArrowDown } from 'react-icons/fi';
 
 export const Home = () => {
   useEffect(() => {
@@ -13,7 +11,15 @@ export const Home = () => {
   return (
     <Layout>
       <div id="home-container" data-aos="fade-left" data-aos-duration="800">
-        <Navbar name={'Home'} />
+        <div
+          id="chip"
+          data-aos="fade-down"
+          data-aos-delay="800"
+          data-aos-duration="800"
+          data-aos-offset="1"
+        >
+          Home
+        </div>
         <div className="home-children">
           <span
             id="home-title"
@@ -53,19 +59,6 @@ export const Home = () => {
           >
             Through the digital world.
           </span>
-        </div>
-        <div className="home-children">
-          <div className="home-children-item">
-            <span id="home-item-title">5+</span>
-            <span id="home-item-text">Projects</span>
-          </div>
-          <div className="home-children-item">
-            <span id="home-item-title">2+</span>
-            <span id="home-item-text">Languages</span>
-          </div>
-        </div>
-        <div className="home-children">
-          <FiArrowDown id="arrow" />
         </div>
       </div>
     </Layout>

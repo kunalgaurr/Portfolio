@@ -19,4 +19,15 @@ body {
   background-color: var(--color1);
   color: var(--color2);
   overflow-x: hidden;
+  background: url(./muha-ajjan-sL2BRR1cuvM-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#chip {
+  padding: 5px 20px;
+  border: var(--border);
+  border-radius: 50px;
+  cursor: pointer;
+  width: fit-content;
 }

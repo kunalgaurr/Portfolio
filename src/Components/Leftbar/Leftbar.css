@@ -6,6 +6,7 @@
   position: sticky;
   top: 0;
   left: 0;
+  bottom: 0;
   overflow: hidden;
 }
 
@@ -19,6 +20,8 @@
   border: var(--border);
   padding: 10px 10px;
   border-radius: 20px;
+  position: relative;
+  backdrop-filter: blur(10px) brightness(70%);
 }
 
 .leftbar-children {

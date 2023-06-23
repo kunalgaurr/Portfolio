@@ -1,8 +1,13 @@
 #home-container {
-  padding: 20px 10%;
+  padding: 10% 10%;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  height: 90%;
+  width: 100%;
+  gap: 30px;
+  backdrop-filter: blur(10px) brightness(60%);
+  border: var(--border);
+  border-radius: 20px;
 }
 
 .home-children {
@@ -22,39 +27,4 @@
 #home-text {
   font-size: 1.2rem;
   color: grey;
-}
-
-.home-children:nth-child(4) {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-}
-
-.home-children-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100px;
-}
-
-#home-item-title {
-  font-size: 3rem;
-  font-weight: 400;
-  color: var(--color3);
-}
-
-.home-children:nth-child(5) {
-  width: 100%;
-  display: grid;
-  place-items: center;
-  animation: arrow 0.8s infinite;
-}
-
-@keyframes arrow {
-  from {
-    transform: translateY(5px);
-  }
-  to {
-    transform: translateY(0px);
-  }
 }
