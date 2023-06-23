@@ -1,80 +1,73 @@
-import React, { useState } from 'react';
-import { IoHandRightOutline } from 'react-icons/io5';
+import React, { useEffect } from 'react';
+import { Layout } from '../../Components/Layout/Layout';
 import './Home.css';
-import { useSpring, animated } from '@react-spring/web';
-import { GiBowenKnot } from 'react-icons/gi';
-import { HiOutlineArrowLongRight } from 'react-icons/hi2';
-import { useNavigate } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { Navbar } from '../../Components/Navbar/Navbar';
+import { FiArrowDown } from 'react-icons/fi';
 
 export const Home = () => {
-  const [mouseEnter, setMouseEnter] = useState(false);
-  const [mouse, setMouse] = useState(false);
-  const navigate = useNavigate();
-
-  const rotate = useSpring({
-    transform: mouseEnter ? 'rotate(30deg)' : 'rotate(0deg)',
-    transformOrigin: 'center',
-    fontSize: '4rem',
-    width: 'fit-content',
-  });
-
-  const rotation = useSpring({
-    transform: mouse ? 'rotate(90deg)' : 'rotate(0deg)',
-    transformOrigin: 'center',
-    fontSize: '4rem',
-    width: 'fit-content',
-  });
-
-  const title = useSpring({
-    backgroundColor: mouse ? `var(--light-blue)` : 'var(--dark-blue)',
-    color: mouse ? `var(--dark-blue)` : 'var(--light-blue)',
-  });
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <animated.div id="home-container" style={title}>
-      <div id="home-wrapper">
-        <div className="home-section">
-          <div id="home-animation">
-            
+    <Layout>
+      <div id="home-container" data-aos="fade-left" data-aos-duration="800">
+        <Navbar name={'Home'} />
+        <div className="home-children">
+          <span
+            id="home-title"
+            data-aos="fade-up"
+            data-aos-delay="800"
+            data-aos-duration="800"
+            data-aos-offset="1"
+          >
+            Hey! I am <span>Kunal Gaur</span>
+          </span>
+          <span
+            id="home-title"
+            data-aos="fade-up"
+            data-aos-delay="1000"
+            data-aos-duration="800"
+            data-aos-offset="1"
+          >
+            A Full-stack developer
+          </span>
+        </div>
+        <div className="home-children">
+          <span
+            id="home-text"
+            data-aos="fade-up"
+            data-aos-delay="1200"
+            data-aos-duration="800"
+            data-aos-offset="1"
+          >
+            I convert dreams into reality
+          </span>
+          <span
+            id="home-text"
+            data-aos="fade-up"
+            data-aos-delay="1400"
+            data-aos-duration="800"
+            data-aos-offset="1"
+          >
+            Through the digital world.
+          </span>
+        </div>
+        <div className="home-children">
+          <div className="home-children-item">
+            <span id="home-item-title">5+</span>
+            <span id="home-item-text">Projects</span>
+          </div>
+          <div className="home-children-item">
+            <span id="home-item-title">2+</span>
+            <span id="home-item-text">Languages</span>
           </div>
         </div>
-        <div
-          className="home-section"
-          onMouseEnter={() => setMouseEnter(true)}
-          onMouseLeave={() => setMouseEnter(false)}
-        >
-          <div id="home-text-container">
-            <animated.div style={rotate}>
-              <IoHandRightOutline />
-            </animated.div>
-            <span id="home-text">
-              Hey There, My is Kunal, I am a Web Developer based in Dehradun,
-              India, and I like to bring ideas into reality through the digital
-              world.
-            </span>
-          </div>
-        </div>
-        <div
-          className="home-section"
-          onMouseEnter={() => setMouse(true)}
-          onMouseLeave={() => setMouse(false)}
-        >
-          <div id="home-title-container">
-            <span id="home-title">Web Developer</span>
-            <animated.span style={rotation}>
-              <GiBowenKnot />
-            </animated.span>
-          </div>
-        </div>
-        <div className="home-section" onClick={() => navigate('/work')}>
-          <div id="home-work-container">
-            <span id="work-button">Work</span>
-            <span>
-              <HiOutlineArrowLongRight />
-            </span>
-          </div>
+        <div className="home-children">
+          <FiArrowDown id="arrow" />
         </div>
       </div>
-    </animated.div>
+    </Layout>
   );
 };
