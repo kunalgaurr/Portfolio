@@ -1,0 +1,42 @@
+#rightbar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  top: 70px;
+  height: calc(100vh - 70px);
+}
+
+#rightbar-wrapper {
+  position: relative;
+}
+
+#rightbar-icon {
+  font-size: 1.4rem;
+}
+
+#rightbar-wrapper:hover > #rightbar-text {
+  opacity: 1;
+}
+
+#rightbar-icon:hover {
+  color: var(--color10);
+}
+#rightbar-div {
+  height: 20vh;
+  width: 1px;
+  background-color: var(--color6);
+}
+
+#rightbar-text {
+  position: absolute;
+  font-size: 1rem;
+  background-color: var(--color1);
+  padding: 5px 10px;
+  border-radius: 4px;
+  right: 100%;
+  opacity: 0;
+}

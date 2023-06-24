@@ -1,30 +1,45 @@
 #home-container {
-  padding: 10% 10%;
+  height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
-  height: 90%;
-  width: 100%;
-  gap: 30px;
-  backdrop-filter: blur(10px) brightness(60%);
-  border: var(--border);
-  border-radius: 20px;
+  gap: 40px;
+  justify-content: center;
+  padding: 0 10vw;
 }
 
 .home-children {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
-#home-title {
+.home-children:nth-child(3) {
+  width: 50%;
+}
+#home-intro {
+  color: var(--color10);
+  font-family: var(--text2);
+}
+
+.home-title {
   font-size: 4rem;
-}
-
-#home-title > span {
-  color: var(--color3);
+  font-weight: 900;
 }
 
 #home-text {
-  font-size: 1.2rem;
-  color: grey;
+  word-spacing: 3px;
+  line-height: 1.5rem;
+}
+
+.home-title:first-child {
+  color: var(--color7);
+}
+
+#home-button {
+  padding: 20px 20px;
+  border: 1px solid var(--color10);
+  border-radius: 3px;
+  color: var(--color10);
+  font-size: 0.9rem;
+  width: fit-content;
+  font-family: var(--text2);
 }

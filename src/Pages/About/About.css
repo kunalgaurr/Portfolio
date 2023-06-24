@@ -1,20 +1,51 @@
 #about-container {
-  padding: 30px 30px;
-  height: 90%;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  padding: 0 10vw;
+}
+
+#about-bottom {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 3vw;
+}
+
+#about-left {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  text-align: justify;
-  backdrop-filter: blur(10px) brightness(60%);
-  border: var(--border);
-  border-radius: 20px;
+  word-spacing: 3px;
+  line-height: 1.5rem;
 }
 
-#about-header {
-  font-size: 4rem;
-  color: var(--color3);
+.about-text > span {
+  color: var(--color10);
 }
 
-.about-body {
-  font-size: 1rem;
+#about-right {
+  position: relative;
+}
+
+.about-overlay {
+  position: absolute;
+  aspect-ratio: 3/4;
+  height: 90%;
+  left: 50%;
+  bottom: 0;
+  border: 2px solid var(--color10);
+  border-radius: 4px;
+}
+
+div.about-overlay {
+  z-index: -1;
+}
+
+#about-image {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 40%;
 }

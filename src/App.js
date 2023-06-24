@@ -1,21 +1,17 @@
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Home } from './Pages/Home/Home';
+import { Layout } from './Components/Layout/Layout';
 import { About } from './Pages/About/About';
-import { Education } from './Pages/Education/Education';
+import { Home } from './Pages/Home/Home';
 
-const App = () => {
+function App() {
   return (
-    <div id="app-container">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/work" element={<Home />} />
-        <Route path="/contact" element={<Home />} />
-      </Routes>
-    </div>
+    <Layout>
+      <div id="app-container">
+        <Home />
+        <About />
+      </div>
+    </Layout>
   );
-};
+}
 
 export default App;

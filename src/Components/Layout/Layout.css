@@ -1,5 +1,12 @@
 #layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#leftbar-wrapper {
   display: grid;
-  grid-template-columns: 4fr 10fr 1fr;
-  place-items: center;
+  grid-template-columns: 1fr 8fr 1fr;
+  gap: 1vw;
+  height: calc(100vh -70px);
 }
