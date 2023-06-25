@@ -8,5 +8,4 @@
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
   gap: 1vw;
-  height: calc(100vh -70px);
 }
