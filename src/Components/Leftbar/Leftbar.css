@@ -11,11 +11,6 @@
   height: calc(100vh - 70px);
 }
 
-#leftbar-hr {
-  transform: translateY(10vh) rotate(90deg);
-  width: 20vh;
-}
-
 .leftbar-icon {
   font-size: 1.4rem;
 }

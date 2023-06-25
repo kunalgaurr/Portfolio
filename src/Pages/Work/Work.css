@@ -1,0 +1,13 @@
+#work-container {
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  padding: 0 10vw;
+}
+
+.work-children {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
