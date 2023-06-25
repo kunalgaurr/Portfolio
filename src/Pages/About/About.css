@@ -7,6 +7,10 @@
   padding: 0 10vw;
 }
 
+#about-top {
+  width: 60%;
+}
+
 #about-bottom {
   display: grid;
   grid-template-columns: 3fr 2fr;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Topbar.css'
+import './Topbar.css';
 
 export const Topbar = () => {
   return (
@@ -13,10 +13,13 @@ export const Topbar = () => {
           <span>2.</span>About
         </span>
         <span className="topbar-children">
-          <span>3.</span>Work
+          <span>3.</span>Education
         </span>
         <span className="topbar-children">
-          <span>4.</span>Contact
+          <span>4.</span>Work
+        </span>
+        <span className="topbar-children">
+          <span>5.</span>Contact
         </span>
         <span id="topbar-button">Resume</span>
       </div>

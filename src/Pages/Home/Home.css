@@ -43,3 +43,8 @@
   width: fit-content;
   font-family: var(--text2);
 }
+
+#home-button:hover {
+  background-color: #64ffdb2c;
+  cursor: pointer;
+}

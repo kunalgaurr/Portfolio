@@ -5,10 +5,10 @@ import { FiMail } from 'react-icons/fi';
 export const Rightbar = () => {
   return (
     <div id="rightbar-container">
-      <div id="rightbar-wrapper">
+      <a href="mailto:kunal_gaur@outlook.com" id="rightbar-wrapper">
         <FiMail id="rightbar-icon" />
         <span id="rightbar-text">kunal_gaur@outlook.com</span>
-      </div>
+      </a>
       <div id="rightbar-div"></div>
     </div>
   );
