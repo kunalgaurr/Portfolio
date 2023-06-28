@@ -22,12 +22,14 @@
   font-family: var(--text1);
   color: var(--color6);
   transition: 0.3s;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--color2);
   scrollbar-width: thin;
   scrollbar-color: var(--color7) var(--color2);
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -42,22 +44,30 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid var(--color2);
 }
 
-.name {
+.name-container {
   font-size: 2rem;
   display: flex;
   align-items: center;
   gap: 1.5vw;
   font-weight: 500;
+  width: 100%;
 }
 
-.name > span {
-  font-family: var(--text2);
+.name {
+  font-family: var(--text1);
   font-size: 1.5rem;
+  color: var(--color6);
+  width: max-content;
+}
+
+.name-number {
+  font-family: var(--text2);
+  font-size: 1.3rem;
   color: var(--color10);
 }
 
 .name-div {
   background-color: var(--color6);
   height: 1px;
-  width: 100%;
+  width: 60%;
 }

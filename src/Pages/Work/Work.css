@@ -1,8 +1,7 @@
 #work-container {
-  height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 100px;
   justify-content: center;
   padding: 0 10vw;
 }
@@ -10,4 +9,129 @@
 .work-children {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.work-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: justify;
+}
+
+.work-body:nth-child(2n) {
+  align-items: flex-end;
+}
+.work-body:nth-child(2n + 1) {
+  align-items: flex-start;
+}
+
+.work-intro {
+  font-family: var(--text2);
+  color: var(--color10);
+}
+
+.work-heading {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.work-text {
+  padding: 10px;
+  background-color: var(--color3);
+  width: 115%;
+  border-radius: 5px;
+  word-spacing: 3px;
+  line-height: 1.3rem;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(2, 12, 27, 1);
+  -moz-box-shadow: 0px 0px 10px -5px rgba(2, 12, 27, 1);
+  box-shadow: 0px 0px 10px -5px rgba(2, 12, 27, 1);
+  z-index: 50;
+}
+
+.work-tech {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.work-tech > span {
+  font-family: var(--text2);
+  font-size: 0.9rem;
+  color: var(--color10);
+}
+
+.work-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.work-link {
+  font-size: 1.5rem;
+}
+
+.work-link-icon:hover {
+  color: var(--color10);
+}
+
+.work-picture {
+  width: 100%;
+  aspect-ratio: 16/11;
+  z-index: -10;
+}
+
+.work-picture:hover {
+  background: linear-gradient(145deg, #64ffdb00 0%, #64ffdb00 100%),
+    url(./work_edited.jpg);
+}
+
+.work-children:nth-child(2) > .work-picture {
+  background: linear-gradient(180deg, #64ffdb55 0%, #64ffdb24 100%),
+    url(./work_edited.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.work-children:nth-child(3) > .work-picture {
+  background: linear-gradient(180deg, #64ffdb55 0%, #64ffdb24 100%),
+    url(./work.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#work-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#other-projects-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#other-projects-heading {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+#other-projects-subheading-text {
+  color: var(--color10);
+  font-family: var(--text2);
+}
+
+#other-projects-subheading-underline {
+  width: 100%;
+  background-color: var(--color10);
+  height: 3px;
+}
+
+#other-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }

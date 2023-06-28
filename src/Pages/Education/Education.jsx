@@ -1,16 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Education.css';
 import { education } from '../../data';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const Education = () => {
   const [position, setPosition] = useState(0);
   const [data, setData] = useState(education[0]);
+  useEffect(() => {
+    AOS.init({ once: true });
+  }, []);
   return (
     <div id="education-container">
-      <div id="education-top">
-        <span className="name">
-          <span>2.</span>Education<div className="name-div"></div>
-        </span>
+      <div
+        id="education-top"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-offset="100"
+      >
+        <div className="name-container">
+          <span className="name-number">3.</span>
+          <span className="name">My Education</span>
+          <div className="name-div"></div>
+        </div>
       </div>
       <div id="education-bottom">
         <div id="education-left">
@@ -69,9 +81,28 @@ export const Education = () => {
           </ul>
         </div>
         <div id="education-right">
-          <span id="education-name">{data.name}</span>
-          <span id="education-duration">{data.duration}</span>
-          <span id="education-text">
+          <span
+            id="education-name"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-offset="100"
+          >
+            {data.name}
+          </span>
+          <span
+            id="education-duration"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-offset="100"
+          >
+            {data.duration}
+          </span>
+          <span
+            id="education-text"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-offset="100"
+          >
             {data.text.map((e) => (
               <li>{e}</li>
             ))}

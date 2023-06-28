@@ -1,0 +1,13 @@
+#footer-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  height: 70px;
+}
+
+#footer-container > span {
+  color: var(--color10);
+  font-family: var(--text2);
+  font-size: 0.8rem;
+}
